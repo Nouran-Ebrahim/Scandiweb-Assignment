@@ -11,8 +11,8 @@ class ProductController
 {
     public function index()
     {
-        $products= Database::table('products')->get();
-        return View::render('productlist',["products"=>$products]);
+        $products = Database::table('products')->get();
+        return View::render('productlist', ["products" => $products]);
     }
 
     public function create()
@@ -21,16 +21,22 @@ class ProductController
     }
     public function store()
     {
-         Database::table('products')->insert([
+        Database::table('products')->insert([
             'sku' => str_replace(" ", "-", Request::post('sku')),
             'name' => Request::post('name'),
             'price' => Request::post('price'),
+            'size' => Request::post('size'),
+            'weight' => Request::post('weight'),
+            'height' => Request::post('height') ,
+            'width' => Request::post('width') ,
+            'length' => Request::post('length'),
         ]);
         return Url::redirect(Url::path('/product-list'));
     }
-    public function delete(){
-        $seletedid=Request::post('deleted');
-        Database::table("products")->where('id','=',$seletedid)->delete();
+    public function delete()
+    {
+        $seletedid = Request::post('deleted');
+        Database::table("products")->where('id', '=', $seletedid)->delete();
         return Url::redirect(Url::path('/product-list'));
     }
 }

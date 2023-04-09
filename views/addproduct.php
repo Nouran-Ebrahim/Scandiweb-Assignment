@@ -20,11 +20,11 @@ use phplite\Url\Url;
 </head>
 
 <body>
-<nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand mx-4" href='<?php echo Url::path("/add-product")?>'>Product Add</a>
-        <ul  class="actions justify-content-end my-0 mx-4">
-        <button form="my-form" type="submit" class="btn btn-primary">save</button>
-            <a href="<?php echo Url::path("/product-list")?>" class="btn btn-danger">Cancel</a>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand mx-4" href='<?php echo Url::path("/add-product") ?>'>Product Add</a>
+        <ul class="actions justify-content-end my-0 mx-4">
+            <button form="my-form" type="submit" class="btn btn-primary">save</button>
+            <a href="<?php echo Url::path("/product-list") ?>" class="btn btn-danger">Cancel</a>
         </ul>
     </nav>
     <form id="my-form" method="post" action="<?php echo Url::path("/store-product") ?>">
@@ -37,23 +37,49 @@ use phplite\Url\Url;
             <input type="text" name="name" class="form-control" id="exampleInputPassword1">
         </div>
         <div class="mb-3">
-            <label for="exampleInputnum1" class="form-label">price</label>
+            <label for="exampleInputnum1" class="form-label">price ($)</label>
             <input type="number" name="price" class="form-control" id="exampleInputnum1">
         </div>
 
         <div class="mb-3">
-            <select  class="form-select m-0 mt-3" id="productType">
+            <select class="form-select m-0 mt-3" id="productType">
                 <option value="" selected>Type Switcher</option>
                 <option value="DVD" id="DVD">DVD-disc</option>
                 <option value="Book" id="Book">Book</option>
                 <option value="Furniture" id="Furniture">Furniture</option>
             </select>
         </div>
-        <!-- <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div> -->
-        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        <div class="mb-3">
+            <div class="dvd d-none">
+                <label for="size" class="form-label">Size (MB)</label>
+                <input class="form-control" type="number" id="size" name="size">
+                <small class="my-2 text-secondary">
+                    Please provide DVD size in mega bytes
+                </small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="book d-none">
+                <label for="weight" class="form-label">Wight (KG)</label>
+                <input class="form-control" type="number" id="weight" name="weight">
+                <small class="my-2 text-secondary">
+                    Please provide book weight in kilo grams
+                </small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="furniture d-none " >
+            <label for="height " class="form-label">Height (CM)</label>
+                <input class="form-control mt-1" type="number" id="height" name="height">
+                <label for="width" class="form-label">Width (CM)</label>
+                <input class="form-control mt-1" type="number" id="width" name="width">
+                <label for="length" class="form-label">Length (CM)</label>
+                <input class="form-control mt-1" type="number" id="length" name="length">
+                <small class="my-2 text-secondary">
+                    Please provide dimensions in HxWxL format
+                </small>
+            </div>
+        </div>
     </form>
 
 
