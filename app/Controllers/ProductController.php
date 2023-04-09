@@ -11,11 +11,6 @@ class ProductController
 {
     public function index()
     {
-
-        // return Database::table('users')->where('id','=',2)->delete();
-        // return Database::instance();
-        // return Database::table('users')->first();
-        // return View::render('admin.dashboard',['name'=>'nouran']);
         $products= Database::table('products')->get();
         return View::render('productlist',["products"=>$products]);
     }
@@ -32,5 +27,9 @@ class ProductController
             'price' => Request::post('price'),
         ]);
         return Url::redirect(Url::path('/product-list'));
+    }
+    public function delete(){
+        $seletedid=Request::post('deleted');
+        Database::table("products")->where('id','=',$seletedid)->delete();
     }
 }

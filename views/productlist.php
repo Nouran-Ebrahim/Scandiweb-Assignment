@@ -24,16 +24,36 @@ use phplite\Url\Url;
         <a class="navbar-brand mx-4" href='<?php echo Url::path("/product-list") ?>'>Product List</a>
         <ul class="actions justify-content-end my-0 mx-4">
             <a href='<?php echo Url::path("/add-product") ?>' class="btn btn-success">Add Product</a>
-            <a href="/mass-delete" class="btn btn-danger">Mass Delete</a>
+            <button form="my-form2" type="submit" class="btn btn-danger">Mass Delete</button>
         </ul>
     </nav>
 
-    <?php 
-   foreach ($products as $product) {
-    echo $product["name"];
-  }
-// print_r($products);
-    ?>
+    
+        <div class="container">
+            <form id="my-form2" method="post" class="container py-4" id="products_form" action="<?php echo Url::path("/delete-product") ?>">
+                <div class="row">
+                    <?php foreach ($products as $product): ?>
+                        <div class="card mb-4 mx-4" style="width: 15rem;">
+                            <div class="form-check">
+                                <input name="deleted" class="form-check-input delete-checkbox" type="checkbox" value="<?php echo $product->id; ?>" id="flexCheckDefault">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title ">
+                                    <?php echo $product->sku; ?>
+                                </h5>
+                                <h6 class="card-subtitle mb-2">
+                                    <?php echo $product->name; ?>
+                                </h6>
+                                <h6 class="card-subtitle mb-2">
+                                    <?php echo $product->price; ?>$
+                                </h6>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </form>
+        </div>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src='../assets/main.js'></script>
