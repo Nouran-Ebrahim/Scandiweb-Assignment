@@ -31,5 +31,6 @@ class ProductController
     public function delete(){
         $seletedid=Request::post('deleted');
         Database::table("products")->where('id','=',$seletedid)->delete();
+        return Url::redirect(Url::path('/product-list'));
     }
 }
