@@ -44,7 +44,10 @@ class ProductController
     public function delete()
     {
         $seletedids = Request::post('deleted');
-        foreach ($seletedids as $seletedid) {
+        $data=implode(" ",$seletedids);
+        $dataarray=explode(" ",$data);
+        var_dump($dataarray);
+        foreach ($dataarray as $seletedid) {
             Database::table("products")->where('id', '=', $seletedid)->delete();
         }
 
