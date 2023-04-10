@@ -70,7 +70,7 @@ use phplite\Url\Url;
         <div class="mb-3 book d-none row">
             <label for="weight" class="col-sm-2 col-form-label">Wight (KG)</label>
             <div class="col-sm-10">
-                <input class="form-control" type="number" id="weight" name="weight" >
+                <input class="form-control" type="number" id="weight" name="weight">
                 <small class="my-2 text-secondary">
                     Please, provide book weight in KG.
                 </small>
@@ -95,7 +95,6 @@ use phplite\Url\Url;
             </div>
         </div>
     </form>
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

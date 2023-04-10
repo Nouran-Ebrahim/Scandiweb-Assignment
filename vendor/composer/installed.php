@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'vendor/php-framework',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '5ca840627033a2c7500816f0393638f6f83b29b3',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -151,6 +151,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'rakit/validation' => array(
+            'pretty_version' => 'v1.4.0',
+            'version' => '1.4.0.0',
+            'reference' => 'ff003a35cdf5030a5f2482299f4c93f344a35b29',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rakit/validation',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/deprecation-contracts' => array(
             'pretty_version' => 'v3.2.1',
             'version' => '3.2.1.0',
@@ -212,9 +221,9 @@
             ),
         ),
         'vendor/php-framework' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '5ca840627033a2c7500816f0393638f6f83b29b3',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

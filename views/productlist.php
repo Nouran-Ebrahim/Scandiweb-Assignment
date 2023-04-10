@@ -29,7 +29,7 @@ use phplite\Url\Url;
     </nav>
 
 
-    <div class="container">
+    <div class="container" >
         <form id="my-form2" method="post" class="container py-4" id="products_form"
             action="<?php echo Url::path("/delete-product") ?>">
             <div class="row">
@@ -39,7 +39,7 @@ use phplite\Url\Url;
                             <input name="deleted" class="form-check-input delete-checkbox" type="checkbox"
                                 value="<?php echo $product->id; ?>" id="flexCheckDefault">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5 class="card-title ">
                                 <?php echo $product->sku; ?>
                             </h5>
@@ -60,7 +60,6 @@ use phplite\Url\Url;
             </div>
         </form>
     </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src='../assets/main.js'></script>

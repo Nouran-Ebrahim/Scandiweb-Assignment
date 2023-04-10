@@ -3,8 +3,6 @@ namespace phplite\Bootstrap;
 
 use phplite\Http\Request;
 use phplite\Http\Response;
-use phplite\Http\Server;
-use phplite\Session\Session;
 use phplite\Router\Route;
 use phplite\File\File;
 

@@ -33,6 +33,10 @@ class ComposerStaticInit053b7323e311b38c74d31f2b249f47e8
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Finder\\' => 25,
         ),
+        'R' => 
+        array (
+            'Rakit\\Validation\\' => 17,
+        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
@@ -95,6 +99,10 @@ class ComposerStaticInit053b7323e311b38c74d31f2b249f47e8
         'Symfony\\Component\\Finder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
+        'Rakit\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rakit/validation/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
