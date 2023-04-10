@@ -23,11 +23,11 @@ use phplite\Url\Url;
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand mx-4" href='<?php echo Url::path("/add-product") ?>'>Product Add</a>
         <ul class="actions justify-content-end my-0 mx-4">
-            <button form="my-form" type="submit" class="btn btn-primary">save</button>
+            <button form="my-form" type="submit" class="btn btn-success">save</button>
             <a href="<?php echo Url::path("/product-list") ?>" class="btn btn-danger">Cancel</a>
         </ul>
     </nav>
-    <form id="my-form" method="post" action="<?php echo Url::path("/store-product") ?>">
+    <form id="my-form" class="w-50 mx-auto" method="post" action="<?php echo Url::path("/store-product") ?>">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">sku</label>
             <input type="text" name="sku" class="form-control" id="exampleInputEmail1">
@@ -43,7 +43,7 @@ use phplite\Url\Url;
 
         <div class="mb-3">
             <select class="form-select m-0 mt-3" id="productType">
-                <option value="" selected>Type Switcher</option>
+                <option value="Type Switcher" selected>Type Switcher</option>
                 <option value="DVD" id="DVD">DVD-disc</option>
                 <option value="Book" id="Book">Book</option>
                 <option value="Furniture" id="Furniture">Furniture</option>
