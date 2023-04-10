@@ -1,5 +1,6 @@
 <?php
 namespace phplite\Validation\Rules;
+use phplite\Database\Database;
 use Rakit\Validation\Rule;
 
 class UniqueRule extends Rule
@@ -7,13 +8,6 @@ class UniqueRule extends Rule
     protected $message = ":attribute :value has been used";
 
     protected $fillableParams = ['table', 'column', 'except'];
-
-    protected $pdo;
-
-    public function __construct(PDO $pdo)
-    {
-        $this->pdo = $pdo;
-    }
 
     public function check($value): bool
     {
@@ -30,12 +24,9 @@ class UniqueRule extends Rule
         }
 
         // do query
-        $stmt = $this->pdo->prepare("select count(*) as count from `{$table}` where `{$column}` = :value");
-        $stmt->bindParam(':value', $value);
-        $stmt->execute();
-        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+           $data=Database::table($table)->where($column,'=',$value)->first();
 
         // true for valid, false for invalid
-        return intval($data['count']) === 0;
+        return $data ? false : true;
     }
 }
