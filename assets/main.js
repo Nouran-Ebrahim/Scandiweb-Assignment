@@ -45,5 +45,4 @@ $(document).ready(function () {
       $("#length").removeAttr("required")
     }
   })
-  console.log("gg")
 });
