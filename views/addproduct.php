@@ -1,5 +1,6 @@
 <?php
 use phplite\Url\Url;
+use phplite\Session\Session;
 
 ?>
 <!DOCTYPE html>
@@ -29,9 +30,17 @@ use phplite\Url\Url;
     </nav>
     <form id="product_form" class="w-50 mx-auto mt-5" method="post" action="<?php echo Url::path("/store-product") ?>">
         <div class="mb-3 row">
+            <?php
+            if (Session::get('errors')) { ?>
+                <div class="alert alert-danger">
+                    <?php echo Session::flash('errors'); ?>
+                </div>
+                <?php
+            }
+            ?>
             <label for="sku" class="col-sm-2 col-form-label">SKU</label>
             <div class="col-sm-10">
-                <input type="text" name="sku" class="form-control" id="sku" required>
+                <input type="text" name="sku"  class="form-control" id="sku" required>
             </div>
         </div>
         <div class="mb-3 row">

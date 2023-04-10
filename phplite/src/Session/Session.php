@@ -31,4 +31,25 @@ class Session
         $_SESSION[$key] = $value;
         return $value;
     }
+    public static  function has($key)
+    {
+        return isset($_SESSION[$key]);
+    }
+    public static  function get($key)
+    {
+        return static::has($key)?$_SESSION[$key]:null;
+    }
+    public static  function remove($key)
+    {
+       unset($_SESSION[$key]);
+    }
+    public static  function flash($key)
+    {
+       $value=null;
+       if(static::has($key)){
+          $value=static::get($key);
+          static::remove($key);
+       }
+       return $value;
+    }
 }

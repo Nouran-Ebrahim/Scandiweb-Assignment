@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2023 at 06:03 PM
+-- Generation Time: Apr 10, 2023 at 08:41 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -44,9 +44,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `sku`, `name`, `price`, `size`, `weight`, `height`, `width`, `length`) VALUES
-(39, 'JVC200123', 'Acme DISC', 100, 700, 0, 0, 0, 0),
-(40, 'GGwPo0d7', 'Wor and Peace', 20, 0, 2, 0, 0, 0),
-(41, 'TRIZ0555', 'Chair', 40, 0, 0, 24, 45, 15);
+(43, 'JVC200122', 'kids book', 7, 0, 7, 0, 0, 0),
+(44, 'JVC200123', 'Acme DISC', 100, 700, 0, 0, 0, 0),
+(45, 'GGwPo0d7', 'Wor and Peace', 20, 0, 2, 0, 0, 0),
+(46, 'TRIZ0555', 'Chair', 40, 0, 0, 24, 45, 15);
 
 --
 -- Indexes for dumped tables
@@ -56,8 +57,7 @@ INSERT INTO `products` (`id`, `sku`, `name`, `price`, `size`, `weight`, `height`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `sku` (`sku`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -67,7 +67,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
