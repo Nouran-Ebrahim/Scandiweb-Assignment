@@ -54,7 +54,7 @@ use phplite\Url\Url;
                 <label for="size" class="form-label">Size (MB)</label>
                 <input class="form-control" type="number" id="size" name="size">
                 <small class="my-2 text-secondary">
-                    Please provide DVD size in mega bytes
+                    Please, provide disc space in MB.
                 </small>
             </div>
         </div>
@@ -63,7 +63,7 @@ use phplite\Url\Url;
                 <label for="weight" class="form-label">Wight (KG)</label>
                 <input class="form-control" type="number" id="weight" name="weight">
                 <small class="my-2 text-secondary">
-                    Please provide book weight in kilo grams
+                    Please, provide book weight in KG.
                 </small>
             </div>
         </div>
@@ -76,7 +76,7 @@ use phplite\Url\Url;
                 <label for="length" class="form-label">Length (CM)</label>
                 <input class="form-control mt-1" type="number" id="length" name="length">
                 <small class="my-2 text-secondary">
-                    Please provide dimensions in HxWxL format
+                    Please, provide all dimensions in CM .
                 </small>
             </div>
         </div>
