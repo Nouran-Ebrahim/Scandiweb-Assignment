@@ -24,7 +24,7 @@ class ProductController
     {
         $sku = Database::table('products')->where('sku', '=', Request::post('sku'))->first();
         if ($sku) {
-             Session::set('errors',"SKU already exist");
+             Session::set('msg',"SKU already exist");
              return Url::redirect(Url::previous());
         } else {
             Database::table('products')->insert([

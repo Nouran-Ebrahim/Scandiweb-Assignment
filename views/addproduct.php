@@ -31,9 +31,9 @@ use phplite\Session\Session;
     <form id="product_form" class="w-50 mx-auto mt-5" method="post" action="<?php echo Url::path("/store-product") ?>">
         <div class="mb-3 row">
             <?php
-            if (Session::get('errors')) { ?>
+            if (Session::get('msg')) { ?>
                 <div class="alert alert-danger">
-                    <?php echo Session::flash('errors'); ?>
+                    <?php echo Session::flash('msg'); ?>
                 </div>
                 <?php
             }
