@@ -47,7 +47,7 @@ use phplite\Url\Url;
                                 <?php echo $product->name; ?>
                             </h6>
                             <h6 class="card-subtitle mb-2">
-                                <?php echo $product->price; ?> $
+                                <?php echo number_format($product->price,2) ; ?> $
                             </h6>
                             <h6 class="type">
                                 <?php echo $product->size ? "Size: " . $product->size . " MB" : null ?>
