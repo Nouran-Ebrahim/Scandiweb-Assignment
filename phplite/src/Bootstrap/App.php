@@ -24,7 +24,6 @@ class App
     {   //Require all routes directory
         File::require_directory('routes');
 
-        Session::start();
         //handel request
 
         Request::handle();
