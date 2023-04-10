@@ -36,7 +36,7 @@ use phplite\Url\Url;
                 <?php foreach ($products as $product): ?>
                     <div class="card mb-4 mx-4" style="width: 15rem;">
                         <div class="form-check">
-                            <input name="deleted" class="form-check-input delete-checkbox" type="checkbox"
+                            <input name="deleted[]" class="form-check-input delete-checkbox" type="checkbox"
                                 value="<?php echo $product->id; ?>" id="flexCheckDefault">
                         </div>
                         <div class="card-body text-center">
