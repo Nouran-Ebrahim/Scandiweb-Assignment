@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2023 at 03:19 PM
+-- Generation Time: Apr 10, 2023 at 06:03 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -44,17 +44,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `sku`, `name`, `price`, `size`, `weight`, `height`, `width`, `length`) VALUES
-(17, 'F-01', 'sofa', 2000, 0, 0, 100, 100, 100),
-(19, 'b-02', 'book', 8, 0, 180, 0, 0, 0),
-(20, 'd-01', 'dvd', 50, 265, 0, 0, 0, 0),
-(21, 'b-01', 'book1', 50, 0, 180, 0, 0, 0),
-(22, 'd-03', 'cd', 50, 20, 0, 0, 0, 0),
-(25, 'g-7', 'book', 5, 0, 0, 0, 0, 0),
-(26, 'b-9', 'nn', 7, 0, 0, 0, 0, 0),
-(27, 'nnn', 'hhh', 444, 0, 0, 0, 0, 0),
-(28, 'd-04', 'dvd', 5, 10, 0, 0, 0, 0),
-(29, 'd-020', 'book4', 10, 10, 0, 0, 0, 0),
-(30, 'h-7', 'book', 10, 10, 0, 0, 0, 0);
+(39, 'JVC200123', 'Acme DISC', 100, 700, 0, 0, 0, 0),
+(40, 'GGwPo0d7', 'Wor and Peace', 20, 0, 2, 0, 0, 0),
+(41, 'TRIZ0555', 'Chair', 40, 0, 0, 24, 45, 15);
 
 --
 -- Indexes for dumped tables
@@ -75,7 +67,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
