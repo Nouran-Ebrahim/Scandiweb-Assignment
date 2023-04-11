@@ -25,6 +25,10 @@ class ComposerStaticInit053b7323e311b38c74d31f2b249f47e8
         array (
             'phplite\\' => 8,
         ),
+        'W' => 
+        array (
+            'Whoops\\' => 7,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -40,6 +44,7 @@ class ComposerStaticInit053b7323e311b38c74d31f2b249f47e8
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
         ),
         'J' => 
@@ -80,6 +85,10 @@ class ComposerStaticInit053b7323e311b38c74d31f2b249f47e8
         array (
             0 => __DIR__ . '/../..' . '/phplite/src',
         ),
+        'Whoops\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -107,6 +116,10 @@ class ComposerStaticInit053b7323e311b38c74d31f2b249f47e8
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
         ),
         'Psr\\Container\\' => 
         array (

@@ -2,7 +2,7 @@
 namespace phplite\Router;
 
 use phplite\Http\Request;
-
+use phplite\View\View;
 
 class Route
 {
@@ -114,7 +114,7 @@ class Route
         if (is_callable($callback)) {
             call_user_func($callback);
         } else {
-            throw new \Exception("please provide a vaild call back function");
+            throw new \Exception("please provide valid callback function");
         }
         static::$prefix = $parent_prefix;
     }
@@ -130,7 +130,7 @@ class Route
         if (is_callable($callback)) {
             call_user_func($callback);
         } else {
-            echo("please provide a vaild call back function");
+            throw new \Exception("please provide valid callback function");
         }
         static::$middleware = $parent_middleware;
     }
@@ -162,7 +162,7 @@ class Route
 
             }
         }
-        die("not found page");
+        return View::render('e404');
     }
     /**
      * invoke the route
@@ -170,7 +170,8 @@ class Route
      *@param array $params
      */
     public static function invoke($route, $params = [])
-    {   static::executeMiddleware($route);
+    {
+        static::executeMiddleware($route);
         $callback = $route['callback'];
         if (is_callable($callback)) {
             return call_user_func_array($callback, $params);
@@ -182,31 +183,31 @@ class Route
                 if (method_exists($object, $method)) {
                     return call_user_func_array([$object, $method], $params);
                 } else {
-                    echo("the method " . $method . " is not exists at " . $controller);
+                    throw new \BadFunctionCallException("The method " . $method . " isn't exists at " . $controller);
                 }
             } else {
-                echo("class " . $controller . " is not found");
+                throw new \ReflectionException("class " . $controller . " isn't found");
             }
         } else {
-            echo("please provide vaild callback function");
+            throw new \InvalidArgumentException("Please provide a valid callback function");
         }
     }
-        /**
+    /**
      * Execute Middleware
      *@param array $route
      */
-    public static function executeMiddleware($route){
-       foreach(explode('|',$route['middleware'] )as $middleware){
-        if($middleware!=''){
-            $middleware = 'App\Middleware\\' . $middleware;
-            if(class_exists($middleware)){
-             $object= new $middleware;
-             return call_user_func_array([$object,'handle'],[]);
-            }
-            else{
-                echo("class " . $middleware . " is not found");
+    public static function executeMiddleware($route)
+    {
+        foreach (explode('|', $route['middleware']) as $middleware) {
+            if ($middleware != '') {
+                $middleware = 'App\Middleware\\' . $middleware;
+                if (class_exists($middleware)) {
+                    $object = new $middleware;
+                    return call_user_func_array([$object, 'handle'], []);
+                } else {
+                    throw new \ReflectionException("Middleware " . $middleware . " isn't found");
+                }
             }
         }
-       }
     }
 }
