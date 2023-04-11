@@ -37,7 +37,7 @@ class ProductController
                 'width' => Request::post('width'),
                 'length' => Request::post('length'),
             ]);
-            return Url::redirect(Url::path('/product-list'));
+            return Url::redirect(Url::path('/'));
         }
 
     }
@@ -50,6 +50,6 @@ class ProductController
             Database::table("products")->where('id', '=', $seletedid)->delete();
         }
 
-        return Url::redirect(Url::path('/product-list'));
+        return Url::redirect(Url::path('/'));
     }
 }

@@ -40,17 +40,15 @@ class Route
      */
     private static function add($methods, $uri, $callback)
     {
-        $uri = trim($uri, '/');
-        $uri = rtrim(static::$prefix . '/' . $uri, '/');
-        $uri ? $uri : '/';
+        $uri = rtrim(static::$prefix . '/' . trim($uri, '/'), '/');
+        $uri = $uri ?: '/';
         foreach (explode('|', $methods) as $method) {
             static::$routes[] = [
-                'uri' => $uri,
-                'callback' => $callback,
-                'method' => $method,
+                'uri'       => $uri,
+                'callback'  => $callback,
+                'method'    => $method,
                 'middleware' => static::$middleware
             ];
-
         }
     }
     /**

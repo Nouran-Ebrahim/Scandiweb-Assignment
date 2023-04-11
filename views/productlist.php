@@ -21,7 +21,7 @@ use phplite\Url\Url;
 
 <body>
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand mx-4" href='<?php echo Url::path("/product-list") ?>'>Product List</a>
+        <a class="navbar-brand mx-4" href='<?php echo Url::path("/") ?>'>Product List</a>
         <ul class="actions justify-content-end my-0 mx-4">
             <a href='<?php echo Url::path("/add-product") ?>' class="btn btn-success">Add Product</a>
             <button form="my-form2" type="submit" class="btn btn-danger">Mass Delete</button>

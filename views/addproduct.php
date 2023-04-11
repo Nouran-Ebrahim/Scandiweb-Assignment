@@ -25,7 +25,7 @@ use phplite\Session\Session;
         <a class="navbar-brand mx-4" href='<?php echo Url::path("/add-product") ?>'>Product Add</a>
         <ul class="actions justify-content-end my-0 mx-4">
             <button form="product_form" type="submit" class="btn btn-success">save</button>
-            <a href="<?php echo Url::path("/product-list") ?>" class="btn btn-danger">Cancel</a>
+            <a href="<?php echo Url::path("/") ?>" class="btn btn-danger">Cancel</a>
         </ul>
     </nav>
     <form id="product_form" class="w-50 mx-auto mt-5" method="post" action="<?php echo Url::path("/store-product") ?>">
