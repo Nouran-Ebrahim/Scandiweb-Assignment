@@ -1,2 +1,2 @@
 # Scandiweb-Assignment
-https://scandiwebtask-nouran.000webhostapp.com//
+https://scandiwebtask-nouran.000webhostapp.com/
