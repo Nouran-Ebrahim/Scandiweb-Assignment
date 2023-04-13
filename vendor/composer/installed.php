@@ -3,7 +3,7 @@
         'name' => 'vendor/php-framework',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'ed79f2bd82f6255e559e0bde5a01367a6b3f5748',
+        'reference' => '83512173965000313217ac7ee7d5b82ebb043050',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -241,7 +241,7 @@
         'vendor/php-framework' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'ed79f2bd82f6255e559e0bde5a01367a6b3f5748',
+            'reference' => '83512173965000313217ac7ee7d5b82ebb043050',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
