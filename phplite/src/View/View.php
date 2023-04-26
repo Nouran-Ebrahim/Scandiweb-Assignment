@@ -3,7 +3,7 @@ namespace phplite\View;
 
 use phplite\File\File;
 
-use Jenssegers\Blade\Blade;
+// use Jenssegers\Blade\Blade;
 
 class View
 {
@@ -20,18 +20,18 @@ class View
     {
         return static::viewrender($path,$data);
     }
-    /**
-     * Render view file using the blade engine
-     *@param string $path
-     *@param array $data
-     * @return string
-     */
-    public static function bladeRender($path, $data = [])
-    {
-        $blade = new Blade(File::path('views'), File::path('storage/cache'));
+    // /**
+    //  * Render view file using the blade engine
+    //  *@param string $path
+    //  *@param array $data
+    //  * @return string
+    //  */
+    // public static function bladeRender($path, $data = [])
+    // {
+    //     $blade = new Blade(File::path('views'), File::path('storage/cache'));
 
-        return $blade->make($path, $data)->render();
-    }
+    //     return $blade->make($path, $data)->render();
+    // }
     /**
      * Render view file
      *@param string $path

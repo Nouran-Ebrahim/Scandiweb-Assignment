@@ -16,7 +16,7 @@ return array(
     'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'Rakit\\Validation\\' => array($vendorDir . '/rakit/validation/src'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Jenssegers\\Blade\\' => array($vendorDir . '/jenssegers/blade/src'),
     'Illuminate\\View\\' => array($vendorDir . '/illuminate/view'),
